@@ -15,9 +15,7 @@ ORDER BY in_out.staCode DESC;
 
 
 
-SELECT date AS 日期,
-stationname as 站名,
-gateincomingcnt as 進佔人數
+SELECT date AS 日期, stationname as 站名,gateincomingcnt as 進佔人數
 FROM station_in_out io
 JOIN stations s ON io.stacode = s.stationcode
 WHERE(stacode,gateincomingcnt) IN (SELECT stacode,MAX(gateincomingcnt)
