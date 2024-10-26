@@ -1,0 +1,24 @@
+
+
+--各站點進站人數最多的一筆
+
+SELECT stationname,date,gateincomingcnt as 最多人数
+FROM station_in_out in_out
+JOIN stations s ON in_out.staCode = s.stationcode
+    JOIN (
+        SELECT staCode,MAX(gateincomingcnt) as 最大進站數
+        FROM station_in_out
+        GROUP BY staCode ) as 每站最大值
+    ON in_out.staCode = 每站最大值.staCode
+    AND gateincomingcnt = 最大進站數
+ORDER BY in_out.staCode DESC;
+
+
+
+SELECT date AS 日期, stationname as 站名,gateincomingcnt as 進佔人數
+FROM station_in_out io
+JOIN stations s ON io.stacode = s.stationcode
+WHERE(stacode,gateincomingcnt) IN (SELECT stacode,MAX(gateincomingcnt)
+FROM station_in_out
+GROUP BY stacode)
+ORDER BY gateincomingcnt DESC;
