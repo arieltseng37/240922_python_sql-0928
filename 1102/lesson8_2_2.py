@@ -5,7 +5,7 @@ import os
 import pandas as pd
 load_dotenv()
 
-@st.cache_data
+@st.cache_data 
 def getData(country:tuple[str])->list[tuple]:
     conn = psycopg2.connect(host=os.environ['POSTGRE_HOST'],
                             database=os.environ['POSTGRE_DATABASE'],

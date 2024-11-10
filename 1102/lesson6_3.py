@@ -10,7 +10,7 @@ cur = conn.cursor()
 cur.execute("SELECT * FROM stations;")
 rows = cur.fetchall()
 names = []
-for row in rows:
+for row in rows: 
     names.append(row[2])
 #st.write(names)
 

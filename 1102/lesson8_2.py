@@ -43,7 +43,7 @@ def get_country():
     return input_dict.values()
 
 def user_select():
-    print('使用者選擇了')
+    print('使用者選擇了') 
     global df
     selectedCountry:tuple[str] = tuple(st.session_state.stocks) 
     if selectedCountry: 

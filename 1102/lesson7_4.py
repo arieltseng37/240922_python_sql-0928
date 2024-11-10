@@ -24,7 +24,7 @@ with st.sidebar:
   
     input_dict=dict(all_country)
     options=st.multiselect("請選擇",input_dict.values(),default='台灣',placeholder="請選擇市場",label_visibility='hidden')
-    st.write(options)
+    st.write(options) 
 
 
 
