@@ -1,0 +1,8 @@
+psycopg2
+streamlit
+
+pandas
+pandas-datareader
+Pyarrow
+yfinance
+python-dotenv
