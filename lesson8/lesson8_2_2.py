@@ -40,7 +40,7 @@ def get_country():
     conn.close()
     input_dict = dict(all_country)
     return input_dict.values()
-   
+     
     
 
 
