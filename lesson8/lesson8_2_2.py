@@ -39,7 +39,7 @@ def get_country():
             all_country = cursor.fetchall()
     conn.close()
     input_dict = dict(all_country)
-    return input_dict.values()         
+    return input_dict.values()            
      
     
 
